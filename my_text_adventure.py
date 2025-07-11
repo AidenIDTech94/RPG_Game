@@ -57,13 +57,17 @@ def adventure():
                 else:
                     print("The enemy spots you after the player made the decision to fight the enemy to avoid getting your location being exposed. ")
 
-                    battle_outcome = random.choice(["win","lose"])
+                    battle_outcome = random.choice(["win", "flee","lose"])
                     if battle_outcome == "win":
                         print(
                             "\nYou deal enough damage to the enemy before it is able to deal too much damage. "
                             "\nTherefore, the enemy becomes unconcious and you continue moving on throughout the musuem in order to scout the Diamond of Power."
                             "\nYou navigate through the halls and eventually, you stole and escape with the Diamond of Power."
                             "\n You win! ")
+                    elif battle_outcome == "win":
+                        print(
+                            "\nYou fled the battle and managed to avoid getting caught. ")
+                        return
 
                     else:
                         print("\nThe enemy dealt a lot of damange and you were knocked unconcious."
